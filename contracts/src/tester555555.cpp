@@ -1,8 +1,6 @@
 #include <eosio/eosio.hpp>
-#include <eosio/print.hpp>
-#include <eosio/asset.hpp>
 #include <eosio/system.hpp>
-#include <eosio/crypto.hpp>
+#include <eosio/asset.hpp>
 
 using namespace std;
 using namespace eosio;
@@ -252,7 +250,7 @@ class [[eosio::contract("tester555555")]] tester555555 : public contract {
             current += MINUTE_SECONDS;
             return current;
         }
-        
+
         uint32_t now() { return current_time_point().sec_since_epoch();}
 };
 
