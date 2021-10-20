@@ -1,0 +1,121 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.2",
+    "types": [],
+    "structs": [
+        {
+            "name": "balance",
+            "base": "",
+            "fields": [
+                {
+                    "name": "funds",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "endlotto",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "entry",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "name"
+                },
+                {
+                    "name": "tickets",
+                    "type": "int64"
+                }
+            ]
+        },
+        {
+            "name": "lottery",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "name"
+                },
+                {
+                    "name": "max",
+                    "type": "uint64"
+                },
+                {
+                    "name": "end_lottery",
+                    "type": "uint32"
+                },
+                {
+                    "name": "is_open",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "receiverand",
+            "base": "",
+            "fields": [
+                {
+                    "name": "caller_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "random",
+                    "type": "checksum256"
+                }
+            ]
+        },
+        {
+            "name": "startlotto",
+            "base": "",
+            "fields": []
+        }
+    ],
+    "actions": [
+        {
+            "name": "endlotto",
+            "type": "endlotto",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "receiverand",
+            "type": "receiverand",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "startlotto",
+            "type": "startlotto",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "balance",
+            "type": "balance",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "entries",
+            "type": "entry",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "lotteries",
+            "type": "lottery",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "kv_tables": {},
+    "ricardian_clauses": [],
+    "variants": [],
+    "action_results": []
+}
