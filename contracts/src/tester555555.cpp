@@ -7,7 +7,7 @@ using namespace eosio;
 
 static constexpr name ORACLE_CONTRACT = name("rng.oracle");
 static constexpr uint32_t MONTH_SECONDS = 2629743;
-static constexpr uint32_t HOUR_SECONDS = 3600;
+static constexpr uint32_t HOUR_SECONDS = 3599;
 static constexpr uint32_t MINUTE_SECONDS= 60;
 static constexpr int64_t DIVISOR = 10000;
 static constexpr uint64_t SEED = 7654325491;
@@ -247,7 +247,7 @@ class [[eosio::contract("tester555555")]] tester555555 : public contract {
 
         uint32_t new_end() { 
             uint32_t current =  current_time_point().sec_since_epoch();
-            current += MINUTE_SECONDS;
+            current += HOUR_SECONDS;
             return current;
         }
 
